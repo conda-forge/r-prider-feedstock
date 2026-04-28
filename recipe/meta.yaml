@@ -1,4 +1,4 @@
-{% set version = '1.0.4' %}
+{% set version = "1.0.6" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/prider_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/prider/prider_{{ version }}.tar.gz
-  sha256: af606194d726239e740d7fa6919d3a19703f0d5494d9fbb04aadf18db652366a
+  sha256: 34a6cc78baf7c8e3e485072458483e63be6b51a671de6ad3e150f58313ec4ed6
 
 build:
-  number: 4
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -62,9 +62,7 @@ test:
 about:
   home: https://github.com/tamminenlab/prider
   license: BSD-3-Clause
-  summary: Implementation of an oligonucleotide primer and probe design algorithm using a linearly
-    scaling approximation of set coverage. A detailed description available at Smolander
-    and Tamminen, 2021; <doi:10.1101/2021.09.06.459073>.
+  summary: Implementation of an oligonucleotide primer and probe design algorithm using a linearly scaling approximation of set coverage. A detailed description available at Smolander and Tamminen, 2021; <doi:10.1101/2021.09.06.459073>.
   license_family: BSD
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/BSD_3_clause
